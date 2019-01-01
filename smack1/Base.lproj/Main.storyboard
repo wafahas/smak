@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="oH9-UZ-QMd" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="dbC-wG-zmC"/>
+                        <segue destination="Jl3-az-nwv" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="s5X-Nw-MWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="zQt-4p-pGV">
+            <objects>
+                <viewController id="Jl3-az-nwv" customClass="ChatVC" customModule="smack1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxV-QN-FgU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwc-di-Pvd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ed3-zv-Qqj">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="7RP-SH-z7R"/>
+                                            <constraint firstAttribute="height" constant="18" id="Qw9-G5-peP"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h27-hA-7D0">
+                                        <rect key="frame" x="161.5" y="45.5" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="h27-hA-7D0" firstAttribute="centerY" secondItem="ed3-zv-Qqj" secondAttribute="centerY" id="AKY-uW-Mqb"/>
+                                    <constraint firstItem="h27-hA-7D0" firstAttribute="centerX" secondItem="Nwc-di-Pvd" secondAttribute="centerX" id="Lrh-L2-DMh"/>
+                                    <constraint firstAttribute="height" constant="77" id="Oqd-yP-XTY"/>
+                                    <constraint firstAttribute="bottom" secondItem="ed3-zv-Qqj" secondAttribute="bottom" constant="12" id="dEM-oT-62B"/>
+                                    <constraint firstItem="ed3-zv-Qqj" firstAttribute="leading" secondItem="Nwc-di-Pvd" secondAttribute="leading" constant="12" id="zSb-WJ-Pim"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nwc-di-Pvd" firstAttribute="top" secondItem="rxV-QN-FgU" secondAttribute="top" id="XiZ-oX-v7t"/>
+                            <constraint firstItem="Nwc-di-Pvd" firstAttribute="leading" secondItem="qTk-5V-WoB" secondAttribute="leading" id="bBF-aL-0ma"/>
+                            <constraint firstItem="Nwc-di-Pvd" firstAttribute="trailing" secondItem="qTk-5V-WoB" secondAttribute="trailing" id="l65-RL-oyR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qTk-5V-WoB"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="ed3-zv-Qqj" id="Rem-U2-ZFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5v-eR-yvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.8" y="596.85157421289364"/>
+        </scene>
+        <!--ChannelVC-->
+        <scene sceneID="qxO-cZ-Cti">
+            <objects>
+                <viewController id="oH9-UZ-QMd" customClass="ChannelVC" customModule="smack1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3kq-g7-NLm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="beR-KH-4Cz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IN2-iO-ahf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="-185"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
+</document>
